@@ -1,9 +1,3 @@
-# To-Do
-This API provides functionality to manage a to-do list. It is built using the Spring Boot framework in Java.
-Certainly! Here's the revised README with the correct endpoint names:
-
----
-
 # To-Do List API
 
 This API provides functionality to manage a to-do list. It is built using the Spring Boot framework in Java.
