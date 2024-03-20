@@ -12,6 +12,13 @@ This API provides functionality to manage a to-do list. It is built using the Sp
 - **DELETE /tasks: Delete all tasks in the to-do list.
 
 
+JSON Format Explanation
+task (String): The title or name of the task.
+description (String): A description or additional information about the task.
+completed (Boolean): Indicates whether the task is completed (true) or not (false).
+dueDate (String): The due date of the task in the format "YYYY-MM-DD".
+
+
 ## Usage
 
 ### GET /tasks
