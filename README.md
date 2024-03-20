@@ -13,6 +13,7 @@ This API provides functionality to manage a to-do list. It is built using the Sp
 
 
 JSON Format Explanation
+
 task (String): The title or name of the task.
 
 description (String): A description or additional information about the task.
