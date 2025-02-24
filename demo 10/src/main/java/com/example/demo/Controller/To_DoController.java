@@ -28,16 +28,19 @@ public class To_DoController {
     public To_Do updateTask(@PathVariable Long id,@RequestBody To_Do updatedToDo ){
        return toDoService.updateTask(id,updatedToDo);
    }
-   @PostMapping("/addTask")
-    public void addTask(@RequestBody To_Do toDo){
-       toDoService.addTask(toDo.getTask(), toDo.getDescription(), toDo.isCompleted(), toDo.getDueDate());
-   }
+    @PostMapping("/addTask")
+    public To_Do addTask(@RequestBody To_Do toDo) {
+        toDoService.addTask(toDo.getTask(), toDo.getDescription(), toDo.isCompleted(), toDo.getDueDate());
+        return toDo;
+    }
+
    @GetMapping("/allTasks")
        public ArrayList <To_Do> displayTasks(){
            return toDoService.displayTasks();
        }
-       @DeleteMapping("/clearTasks")
-       public void removeAllTasks(){
+    @DeleteMapping("/clearTasks")
+    public ArrayList<To_Do> removeAllTasks(){
         toDoService.removeAllTasks();
-       }
+        return toDoService.displayTasks();  // Return the updated list of tasks
+    }
 }
